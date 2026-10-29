@@ -34,6 +34,7 @@ export default defineSchema({
     description: v.string(),
     longDescription: v.optional(v.string()),
     imageUrl: v.optional(v.string()),
+    imageStorageId: v.optional(v.id("_storage")),
     tags: v.array(v.string()),
     liveUrl: v.optional(v.string()),
     githubUrl: v.optional(v.string()),
