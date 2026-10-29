@@ -1,0 +1,488 @@
+@reference "../../../globals.css";
+
+.form {
+  @apply flex max-w-[800px] flex-col gap-5;
+}
+
+.grid2 {
+  @apply grid grid-cols-1 gap-4 sm:grid-cols-2;
+}
+
+.actions {
+  @apply mt-3 flex flex-wrap items-center gap-3 border-t border-[var(--border)] pt-5;
+}
+
+.savedMsg {
+  @apply text-sm font-semibold text-emerald-400;
+}
+
+.listHeader {
+  @apply mb-6 flex flex-wrap items-center justify-between gap-3;
+}
+
+.listTitle {
+  @apply text-base font-bold text-[var(--text-secondary)];
+}
+
+.list {
+  @apply mb-8 flex flex-col gap-3;
+}
+
+.listItem {
+  @apply flex flex-col items-stretch gap-4 rounded-xl border border-[var(--border)] bg-[var(--bg-card)] px-4 py-4 transition-colors duration-200 hover:border-[var(--border-hover)] sm:flex-row sm:items-center sm:px-5;
+}
+
+.listItemInfo {
+  @apply min-w-0 flex-1;
+}
+
+.listItemTitle {
+  @apply mb-0.5 overflow-hidden text-ellipsis whitespace-nowrap text-[0.9375rem] font-semibold text-[var(--text-primary)];
+}
+
+.listItemMeta {
+  @apply text-[0.8125rem] text-[var(--text-muted)];
+}
+
+.listItemActions {
+  @apply flex w-full shrink-0 items-center gap-3 sm:w-auto;
+}
+
+.btnEdit {
+  @apply min-h-11 flex-1 cursor-pointer rounded-xl px-[1.125rem] py-2 text-sm font-semibold transition-all duration-200 hover:-translate-y-px sm:min-h-0 sm:flex-none;
+  border: 1px solid var(--button-accent-border);
+  background: var(--button-accent-background);
+  color: var(--button-accent-text);
+}
+
+.btnEdit:hover {
+  border-color: var(--button-accent-border-hover);
+  background: var(--button-accent-background-hover);
+}
+
+.btnDelete {
+  @apply min-h-11 flex-1 cursor-pointer rounded-xl border border-rose-500/25 bg-rose-500/10 px-[1.125rem] py-2 text-sm font-semibold text-rose-400 transition-all duration-200 hover:-translate-y-px hover:bg-rose-500/20 sm:min-h-0 sm:flex-none;
+}
+
+.formSection {
+  @apply flex flex-col gap-6 rounded-2xl border border-[var(--border)] bg-[var(--bg-secondary)] p-4 sm:p-8;
+}
+
+.formSectionTitle {
+  @apply mb-1 border-b border-[var(--border)] pb-3 text-[0.9375rem] font-bold text-[var(--text-primary)];
+}
+
+.empty {
+  @apply p-8 text-center text-[0.9rem] text-[var(--text-muted)];
+}
+
+.tagInput {
+  @apply flex min-w-0 gap-2;
+}
+
+.tagInput > :first-child {
+  @apply min-w-0 flex-1;
+}
+
+.tagInput > .input {
+  @apply w-auto;
+}
+
+.tags {
+  @apply mt-2 flex flex-wrap gap-1.5;
+}
+
+.tagBadge {
+  @apply inline-flex items-center gap-1 rounded-full border border-violet-500/20 bg-violet-500/10 px-[0.6rem] py-[0.2rem] text-xs font-semibold text-violet-300;
+}
+
+.tagRemove {
+  @apply flex cursor-pointer items-center border-0 bg-transparent p-0 leading-none text-violet-300;
+}
+
+.divider {
+  @apply my-2 h-px bg-[var(--border)];
+}
+
+.checkbox {
+  @apply flex cursor-pointer items-center gap-2 text-[0.9rem] text-[var(--text-secondary)];
+}
+
+.checkbox input {
+  @apply h-4 w-4 accent-violet-500;
+}
+
+.msgCard {
+  @apply flex flex-col gap-2 rounded-xl border border-[var(--border)] bg-[var(--bg-card)] p-5;
+}
+
+.unread {
+  @apply border-l-[3px] border-l-violet-500;
+}
+
+.msgHeader {
+  @apply flex flex-col items-start gap-2 sm:flex-row sm:items-start sm:justify-between;
+}
+
+.msgName {
+  @apply text-[0.9375rem] font-bold;
+}
+
+.msgMeta {
+  @apply text-[0.8125rem] text-[var(--text-muted)];
+}
+
+.msgSubject {
+  @apply text-sm font-semibold text-violet-300;
+}
+
+.msgBody {
+  @apply text-[0.9rem] leading-relaxed text-[var(--text-secondary)];
+}
+
+.msgActions {
+  @apply mt-1 flex flex-wrap gap-2;
+}
+
+.unreadDot {
+  @apply h-2 w-2 shrink-0 rounded-full bg-violet-500;
+}
+
+.skillsError {
+  @apply rounded-xl border border-rose-500/25 bg-rose-500/10 p-3 text-sm text-rose-400;
+}
+
+.skillsPanel {
+  display: grid;
+  width: 100%;
+  max-width: 64rem;
+  gap: 1.25rem;
+}
+
+.skillsSection {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding: 1.5rem;
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  background: var(--bg-secondary);
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.sectionTitle {
+  margin: 0;
+  color: var(--text-primary);
+  font-size: 1.0625rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.sectionDescription {
+  margin: 0.35rem 0 0;
+  color: var(--text-muted);
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.countBadge {
+  flex: 0 0 auto;
+  padding: 0.35rem 0.7rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: var(--text-secondary);
+  font-size: 0.8125rem;
+  font-weight: 600;
+}
+
+.skillList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.skillRow {
+  display: flex;
+  align-items: center;
+  gap: 1.125rem;
+  padding: 0.875rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 0.875rem;
+  background: var(--bg-card);
+  transition: border-color 160ms ease, background-color 160ms ease, transform 160ms ease;
+}
+
+.skillRow:hover {
+  transform: translateY(-1px);
+  border-color: var(--button-accent-border);
+  background: var(--bg-card-hover);
+}
+
+.skillIcon {
+  display: flex;
+  width: 3rem;
+  height: 3rem;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border: 1px solid var(--button-accent-border);
+  border-radius: 0.75rem;
+  background: var(--button-accent-background);
+  color: var(--button-accent-text);
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+.skillDetails {
+  display: flex;
+  align-items: center;
+  min-width: 0;
+  flex: 1;
+  gap: 1.5rem;
+}
+
+.skillInfo {
+  display: grid;
+  min-width: 10rem;
+  flex: 0 1 36%;
+  gap: 0.35rem;
+}
+
+.skillName {
+  overflow: hidden;
+  margin: 0;
+  color: var(--text-primary);
+  font-size: 1rem;
+  font-weight: 650;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.skillCategory {
+  width: fit-content;
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+  background: var(--button-accent-background);
+  color: var(--button-accent-text);
+  font-size: 0.75rem;
+}
+
+.proficiency {
+  display: flex;
+  min-width: 5rem;
+  flex: 1;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.progressTrack {
+  height: 0.5rem;
+  min-width: 2.5rem;
+  flex: 1;
+  overflow: hidden;
+  border-radius: 999px;
+  background: var(--border);
+}
+
+.progressFill {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: #38bdf8;
+}
+
+.skillLevel {
+  min-width: 2.5rem;
+  color: var(--text-primary);
+  font-size: 0.8125rem;
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+  text-align: right;
+}
+
+.skillActions {
+  display: flex;
+  flex: 0 0 auto;
+  gap: 0.375rem;
+}
+
+.skillActions .btnEdit,
+.skillActions .btnDelete {
+  display: inline-flex;
+  width: auto;
+  height: 2.5rem;
+  min-height: 0;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  gap: 0.45rem;
+  padding: 0 0.8rem;
+  border-radius: 0.75rem;
+  font-size: 0.8125rem;
+  font-weight: 650;
+}
+
+.skillActions svg {
+  width: 1.1rem;
+  height: 1.1rem;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.6;
+}
+
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 2rem 1rem;
+  border: 1px dashed var(--border);
+  border-radius: 0.875rem;
+  text-align: center;
+}
+
+.emptyTitle {
+  margin: 0;
+  color: var(--text-primary);
+  font-size: 1rem;
+  font-weight: 650;
+}
+
+.emptyDescription {
+  margin: 0 0 0.5rem;
+  color: var(--text-muted);
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.skillForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.field {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.fieldLabel {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.fieldLabel span,
+.fieldHint {
+  color: var(--text-muted);
+  font-size: 0.8125rem;
+  font-weight: 400;
+}
+
+.proficiencyHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.proficiencyValue {
+  color: var(--text-primary);
+  font-size: 0.875rem;
+  font-weight: 650;
+}
+
+.proficiencyRange {
+  width: 100%;
+  margin: 0.35rem 0;
+  accent-color: #38bdf8;
+}
+
+.rangeLabels {
+  display: flex;
+  justify-content: space-between;
+  color: var(--text-muted);
+  font-size: 0.75rem;
+}
+
+.displayOptions {
+  border-top: 1px solid var(--border);
+  padding-top: 1rem;
+}
+
+.displayOptions summary {
+  width: fit-content;
+  color: var(--text-secondary);
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.displayOptions[open] .formGrid {
+  margin-top: 1rem;
+}
+
+.formActions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  border-top: 1px solid var(--border);
+  padding-top: 1.25rem;
+}
+
+@media (max-width: 600px) {
+  .skillsSection {
+    padding: 1.125rem;
+  }
+
+  .skillRow {
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .skillDetails {
+    min-width: calc(100% - 3.75rem);
+    gap: 0.75rem;
+  }
+
+  .skillInfo {
+    min-width: 0;
+    flex-basis: 45%;
+  }
+
+  .skillActions {
+    margin-left: auto;
+  }
+
+  .formGrid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 420px) {
+  .skillDetails {
+    flex: 1 1 100%;
+    order: 2;
+  }
+
+  .skillActions {
+    order: 1;
+  }
+}
